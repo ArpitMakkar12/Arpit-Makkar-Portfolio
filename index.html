@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arpit Makkar — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    </head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+
+<!-- Floating aurora blobs -->
+<div class="aurora">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Particles canvas -->
+<canvas id="pc"></canvas>
+
+<!-- ════════ NAVBAR ════════ -->
+<button class="ham-btn" id="hamBtn" aria-label="Open menu">
+  <span class="ham-line"></span>
+  <span class="ham-line"></span>
+  <span class="ham-line"></span>
+</button>
+
+<nav class="ham-overlay" id="hamOverlay" aria-hidden="true">
+  <ul class="ham-list">
+    <li><a href="#hero-section" class="ham-item" data-sec="0"><span class="ham-num">01</span>Home</a></li>
+    <li><a href="#about"        class="ham-item" data-sec="1"><span class="ham-num">02</span>About</a></li>
+    <li><a href="#education"    class="ham-item" data-sec="2"><span class="ham-num">03</span>Education</a></li>
+    <li><a href="#projects"     class="ham-item" data-sec="3"><span class="ham-num">04</span>Projects</a></li>
+    <li><a href="#skills"       class="ham-item" data-sec="4"><span class="ham-num">05</span>Skills</a></li>
+    <li><a href="#experience"   class="ham-item" data-sec="5"><span class="ham-num">06</span>Experience</a></li>
+    <li><a href="#certification" class="ham-item" data-sec="6"><span class="ham-num">07</span>Certifications</a></li>
+    <li><a href="#footer"       class="ham-item" data-sec="7"><span class="ham-num">08</span>Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ════════ SOCIAL ════════ -->
+<ul class="sci">
+  <li><a href="https://www.linkedin.com/in/makkararpit/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+  <li><a href="https://github.com/ArpitMakkar12" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+  <li><a href="mailto:arpitmakkar1204@gmail.com" title="Email"><i class="fa-regular fa-envelope"></i></a></li>
+</ul>
+
+<!-- ════════ HERO ════════ -->
+<section id="hero-section" class="hero-section">
+
+  <!-- LEFT -->
+  <div class="hero-left">
+    <div class="section-index">
+      <span>01</span>
+      <div class="idx-line"></div>
+      <span style="font-size:.65rem;letter-spacing:.2em;color:rgba(255,255,255,.25);text-transform:uppercase;">Introduction</span>
+    </div>
+
+    <p class="greeting">Hello, I'm</p>
+
+    <h1 class="hero-name">
+      <span class="name-line"><span>ARPIT</span></span>
+      <span class="name-line"><span>MAKKAR.</span></span>
+    </h1>
+
+    <div class="name-underline"></div>
+
+    <div class="role-row">
+      <div class="role-dot"></div>
+      <p id="typed-role"></p>
+    </div>
+
+    <p class="bio">
+      Passionate about <strong>algorithms, AI,</strong> and building scalable solutions.<br>
+      Currently studying <strong>B.Tech CSE</strong> at <strong>VIT-AP University.</strong>
+    </p>
+
+    <div class="hero-buttons">
+      <a href="./assets/resume/Arpit_Makkar_Resume_2026.pdf" 
+        download="Arpit_Makkar_Resume_2026.pdf" 
+        class="btn btn-outline">↓ Resume</a>
+      <a href="#projects" class="btn btn-fill">View Projects →</a>
+    </div>
+
+    <div class="stats-strip">
+      <div class="stat-item">
+        <div class="stat-num"><span class="stat-count" data-target="8">0</span><span class="cyan">+</span></div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span class="stat-count" data-target="27">0</span></div>
+        <div class="stat-label">Proficiency <br>Assessed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span class="stat-count" data-target="5">0</span><span class="cyan">+</span></div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" style="font-size:1rem;padding-top:5px;letter-spacing:.02em;">VIT<span class="cyan">-AP</span></div>
+        <div class="stat-label">University</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="hero-right">
+    <div class="photo-wrap">
+      <div class="photo-glow"></div>
+      <img src="/images/arpit.jpg" alt="Arpit Makkar" class="profile-pic"
+           onerror="this.style.background='linear-gradient(135deg,#0d2040,#0a3060)';this.src='';">
+      <!-- Badges -->
+      <div class="badge"><span class="badge-dot"></span>Python</div>
+      <div class="badge"><span class="badge-dot"></span>Machine Learning</div>
+      <div class="badge"><span class="badge-dot"></span>React.js</div>
+      <div class="badge"><span class="badge-dot"></span>Data Science</div>
+      <!-- <div class="badge"><span class="badge-dot"></span>AI / LLMs</div> -->
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="scroll-cue">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Scroll</span>
+  </div>
+
+  <!-- Marquee strip -->
+  <div class="marquee-strip">
+    <div class="marquee-track" id="marqueeTrack"></div>
+  </div>
+
+</section>
+
+<section id="about">
+
+  <!-- Heading -->
+  <div class="section-eyebrow" data-reveal>
+    <span class="eyebrow-index">02</span>
+    <div class="eyebrow-line"></div>
+    <span class="eyebrow-tag">About me</span>
+  </div>
+  <h2 class="section-title" data-reveal>Who I <span class="cyan">Am.</span></h2>
+
+  <div class="about-grid">
+
+    <!-- ══ LEFT ══ -->
+    <div class="left-col">
+
+      <!-- Profile card -->
+      <div class="profile-card" data-reveal>
+        <div class="avatar-wrap">
+          <div class="avatar-ring"></div>
+          <img src="/images/arpit.jpg" alt="Arpit Makkar" class="avatar-img"
+               onerror="this.style.background='linear-gradient(135deg,#0d2040,#0a3060)';this.src='';">
+          <div class="online-badge" title="Open to opportunities"></div>
+        </div>
+
+        <div class="card-name">Arpit Makkar</div>
+        <div class="card-role">B.Tech CSE · Data Analytics · VIT-AP</div>
+
+        <div class="cgpa-strip">
+          <div>
+            <div class="cgpa-label">Academic CGPA</div>
+            <div class="cgpa-label" style="font-size:.6rem;margin-top:1px;color:rgba(255,255,255,.22);">Upto 5th Semester</div>
+          </div>
+          <div><span class="cgpa-val">9.09</span><span class="cgpa-max"> / 10</span></div>
+        </div>
+
+        <div class="meta-pills">
+          <span class="meta-pill"><i class="fa-solid fa-location-dot"></i> Patiala, Punjab</span>
+          <span class="meta-pill"><i class="fa-solid fa-graduation-cap"></i> Graduating 2027</span>
+          <span class="meta-pill"><i class="fa-solid fa-briefcase"></i> Visteon Corp.</span>
+          <span class="meta-pill"><i class="fa-solid fa-envelope"></i> Open to Roles</span>
+        </div>
+
+        <a href="./assets/resume/Arpit_Makkar_Resume_2026.pdf" download="Arpit_Makkar_Resume_2026.pdf" class="download-btn">
+          <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+        </a>
+      </div>
+
+      <!-- Certifications -->
+      <div class="mini-card" data-reveal style="transition-delay:.08s">
+        <div class="mini-title">Certifications</div>
+        <div class="cert-list">
+          <div class="cert-item"><span class="cert-dot"></span>Full Stack MERN — Delta<span class="cert-org">Apna College</span></div>
+          <div class="cert-item"><span class="cert-dot"></span>AWS Cloud Architecting &amp; Foundations<span class="cert-org">Amazon</span></div>
+          <div class="cert-item"><span class="cert-dot"></span>Oracle Autonomous DB Professional<span class="cert-org">Oracle</span></div>
+          <div class="cert-item"><span class="cert-dot"></span>EV Infrastructure Planning & Optimization<span class="cert-org">Sabudh Foundation × STPI</span></div>
+          <div class="cert-item"><span class="cert-dot"></span>Machine Learning<span class="cert-org">Sabudh Foundation</span></div>
+          <div class="cert-item"><span class="cert-dot"></span>Deep Learning<span class="cert-org">Sabudh Foundation</span></div>
+          <div class="cert-item"><span class="cert-dot"></span>Natural Language Processing<span class="cert-org">Sabudh Foundation</span></div>
+          <div class="cert-item"><span class="cert-dot"></span>Python Programming<span class="cert-org">Sabudh Foundation</span></div>
+          <div class="cert-item"><span class="cert-dot"></span>SQL<span class="cert-org">Sabudh Foundation</span></div>
+          <div class="cert-item"><span class="cert-dot"></span>Data Structures & Algorithms<span class="cert-org">Sabudh Foundation</span></div>
+        </div>
+      </div>
+
+      <!-- Interests -->
+      <div class="mini-card" data-reveal style="transition-delay:.14s">
+        <div class="mini-title">Interests</div>
+        <div class="interest-grid">
+          <div class="int-chip"><span class="d"></span>AI Research</div>
+          <div class="int-chip"><span class="d"></span>Cyber Security</div>
+          <div class="int-chip"><span class="d"></span>Full Stack Web Development</div>
+          <div class="int-chip"><span class="d"></span>Open Source</div>
+          <div class="int-chip"><span class="d"></span>Data Science & Analytics</div>
+          <div class="int-chip"><span class="d"></span>System Design</div>
+        </div>
+      </div>
+
+    </div><!-- /left -->
+
+    <!-- ══ RIGHT ══ -->
+    <div class="right-col">
+
+      <!-- Bio -->
+      <div class="bio-card" data-reveal style="transition-delay:.04s">
+        <div class="bio-eyebrow"><span class="el"></span>My story</div>
+        <p class="bio-text">
+          Most people pick a lane — frontend, backend, ML, cloud. I never did. I'm a
+          <strong>CS student at VIT-AP</strong> specialising in Data Analytics (CGPA 9.09),
+          currently interning at <strong>Visteon Corporation</strong> where I get to see what
+          production-grade automotive software actually looks like under the hood.
+        </p>
+        <p class="bio-text">
+          My projects don't start as projects. They start as problems I can't stop thinking about.
+          At <strong>Sabudh Foundation</strong>, that problem was India's EV infrastructure gap — I built
+          a full <strong>ML pipeline to forecast charging demand</strong> and used genetic algorithms to
+          figure out where stations would actually matter, not just where they'd fit. At a hackathon,
+          it was the question of whether a city street is safe at 11pm for a woman walking alone —
+          <strong>Citadel Maps</strong> answered it with GIS and community data, built overnight at
+          CodeStorm 2025. <strong>SwarSmriti</strong> asked what happens to someone's voice and memories
+          after they're gone — built at Google CodeClash, it made people cry in the demo.
+          <strong>Project Eidolon</strong> asked how attackers behave when they think no one is watching —
+          the answer was a <strong>50-node honeypot network</strong> that lets me find out.
+          MERN, FastAPI, Docker Swarm, AWS, LLMs — whatever the problem needs.
+        </p>
+        <div class="bio-quote">
+          The best engineers I admire don't talk about what they'll build. They show you what already runs. 
+        </div>
+      </div>
+
+      <!-- Pillars -->
+      <div class="pillars-row" data-reveal style="transition-delay:.12s">
+        <div class="pillar">
+          <div class="p-icon"><i class="fa-solid fa-brain"></i></div>
+          <div class="p-title">Think</div>
+          <div class="p-desc">Problems first, tools second. I like to understand the why deeply before deciding the how.</div>
+        </div>
+        <div class="pillar">
+          <div class="p-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div class="p-title">Build</div>
+          <div class="p-desc">Full-stack + ML engineer. MERN, FastAPI, Docker Swarm, LLMs — whatever the problem calls for.</div>
+        </div>
+        <div class="pillar">
+          <div class="p-icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="p-title">Ship</div>
+          <div class="p-desc">From localhost to production — <br>I like seeing things land in the real world, not just in a readme.</div>
+        </div>
+      </div>
+
+      <!-- Currently -->
+      <div class="currently-card" data-reveal style="transition-delay:.18s">
+        <div class="mini-title" style="margin-bottom:14px;">Currently</div>
+        <div class="c-list">
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-car-side"></i></div>
+            <div class="c-body">
+              <div class="c-label">Visteon Scholar Intern — Visteon Corporation</div>
+              <div class="c-sub">Automotive cockpit electronics &amp; connected vehicle software · Jan 2026 – Present</div>
+            </div>
+            <span class="c-badge bg-active">Active</span>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="c-body">
+              <div class="c-label">Final Year — B.Tech CSE (Data Analytics)</div>
+              <div class="c-sub">VIT-AP University · CGPA 9.09 · Expected 2027</div>
+            </div>
+            <span class="c-badge bg-active">Active</span>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="c-body">
+              <div class="c-label">Building Cyber Deception Systems</div>
+              <div class="c-sub">Docker Swarm · Mistral 7B · ELK Stack · Honeypot Networks</div>
+            </div>
+            <span class="c-badge bg-building">Building</span>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-building"></i></div>
+            <div class="c-body">
+              <div class="c-label">Crafting Full-Stack Web Apps</div>
+              <div class="c-sub">MERN · FastAPI · Tailwind CSS · REST APIs · JWT Auth</div>
+            </div>
+            <span class="c-badge bg-building">Building</span>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="c-body">
+              <div class="c-label">Open to SDE / ML / Data Roles</div>
+              <div class="c-sub">Internships · Full-time · On-site & Remote</div>
+            </div>
+            <span class="c-badge bg-open">Open</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-strip" data-reveal style="transition-delay:.24s">
+        <div class="stat-box">
+          <div class="stat-num"><span class="stat-count" data-target="8">0</span><span class="c">+</span></div>
+          <div class="stat-lbl">Projects</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num"><span class="stat-count" data-target="2">0</span></div>
+          <div class="stat-lbl">Internships</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num"><span class="stat-count" data-target="5">0</span><span class="c">+</span></div>
+          <div class="stat-lbl">Certifications</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="font-size:1rem;padding-top:6px;letter-spacing:.02em;">9.09<span class="c"> GPA</span></div>
+          <div class="stat-lbl">Academic</div>
+        </div>
+      </div>
+
+    </div><!-- /right -->
+  </div>
+</section>
+
+<section id="education">
+
+  <!-- heading -->
+  <div class="section-eyebrow" data-reveal>
+    <span class="ey-index">03</span>
+    <div class="ey-line"></div>
+    <span class="ey-tag">Academic path</span>
+  </div>
+  <h2 class="section-title" data-reveal>Education <span class="cyan">Journey.</span></h2>
+
+  <!-- timeline -->
+  <div class="timeline">
+
+    <!-- ═══ Entry 1: VIT-AP (active) ═══ -->
+    <div class="tl-entry tl-active" data-tl>
+      <div class="tl-node active">&#x27;23</div>
+      <div class="tl-stub"></div>
+      <div class="tl-card active-card">
+
+        <div class="card-top">
+          <div class="card-left">
+            <div class="card-inst">Vellore Institute of Technology — AP</div>
+            <div class="card-degree">B.Tech in Computer Science &amp; Engineering<br><span style="color:rgba(0,212,255,.7);">Specialisation in Data Analytics</span></div>
+            <div class="badge-row">
+              <span class="badge badge-cyan"><i class="fa-solid fa-star" style="font-size:.6rem;"></i>9.09 CGPA</span>
+              <span class="badge badge-dim"><i class="fa-regular fa-calendar" style="font-size:.6rem;"></i>2023 – 2027</span>
+              <span class="badge badge-dim">Amaravati, Andhra Pradesh</span>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="status-pill status-present">
+              <span class="status-dot"></span>Present
+            </div>
+          </div>
+        </div>
+
+        <p class="card-desc">
+          Focused on <strong style="color:rgba(255,255,255,.82);">Data Structures, Algorithms, AI and Data Science.</strong>
+          Actively contributing to the tech community through hackathons, open-source projects, and industry internships
+          while maintaining a top-tier academic record.
+        </p>
+
+        <div class="highlights">
+          <div class="hl-item">
+            <div class="hl-icon"><i class="fa-solid fa-trophy"></i></div>
+            <div class="hl-body">
+              <div class="hl-label">Visteon Scholar Intern</div>
+              <div class="hl-sub">Competitive selection at Visteon Corporation — automotive cockpit &amp; connected vehicle software</div>
+            </div>
+            <span class="badge badge-green" style="align-self:center;">Jan 2026</span>
+          </div>
+          <div class="hl-item">
+            <div class="hl-icon"><i class="fa-solid fa-microscope"></i></div>
+            <div class="hl-body">
+              <div class="hl-label">Data Science Intern — Sabudh Foundation (STPI, Govt. of India)</div>
+              <div class="hl-sub">EV infrastructure planning · ML forecasting · Genetic algorithms · A+ in DSA &amp; SQL</div>
+            </div>
+            <span class="badge badge-dim" style="align-self:center;">Jul–Dec '25</span>
+          </div>
+          <div class="hl-item">
+            <div class="hl-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="hl-body">
+              <div class="hl-label">Web Dev Intern — Google Developer Group VIT-AP</div>
+              <div class="hl-sub">Built official GDG feedback platform · ReactJS + Tailwind · Core Team Certificate</div>
+            </div>
+            <span class="badge badge-dim" style="align-self:center;">Nov '24</span>
+          </div>
+          <div class="hl-item">
+            <div class="hl-icon"><i class="fa-solid fa-music"></i></div>
+            <div class="hl-body">
+              <div class="hl-label">Vice President — "Beat The Heat" Dance Crew</div>
+              <div class="hl-sub">Managed Showdown 2.0 &amp; Dance Workshops · Campus leadership &amp; event organisation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-strip">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">MERN Stack</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">LLMs / RAG</span>
+          <span class="skill-tag">Qiskit</span>
+          <span class="skill-tag">Data Analytics</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══ Entry 2: 12th Grade ═══ -->
+    <div class="tl-entry" data-tl style="transition-delay:.12s;">
+      <div class="tl-node done">'21</div>
+      <div class="tl-stub"></div>
+      <div class="tl-card done-card">
+
+        <div class="card-top">
+          <div class="card-left">
+            <div class="card-inst">Senior Secondary — 12th Grade</div>
+            <div class="card-degree">Science Stream &nbsp;·&nbsp; PCM with Computer Science</div>
+            <div class="badge-row">
+              <span class="badge badge-green"><i class="fa-solid fa-check" style="font-size:.6rem;"></i>85.6%</span>
+              <span class="badge badge-dim">CBSE Board</span>
+              <span class="badge badge-dim">Patiala, Punjab</span>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="status-pill status-done">Completed</div>
+          </div>
+        </div>
+
+        <p class="card-desc">
+          Built a rigorous foundation in <strong style="color:rgba(255,255,255,.75);">Mathematics, Physics and Computer Science.</strong>
+          First exposure to programming and problem-solving — the spark that set the direction for everything that followed.
+        </p>
+
+        <div class="skill-strip">
+          <span class="skill-tag" style="color:rgba(255,255,255,.4);border-color:rgba(255,255,255,.08);background:rgba(255,255,255,.03);">Mathematics</span>
+          <span class="skill-tag" style="color:rgba(255,255,255,.4);border-color:rgba(255,255,255,.08);background:rgba(255,255,255,.03);">Physics</span>
+          <span class="skill-tag" style="color:rgba(255,255,255,.4);border-color:rgba(255,255,255,.08);background:rgba(255,255,255,.03);">Computer Science</span>
+          <span class="skill-tag" style="color:rgba(255,255,255,.4);border-color:rgba(255,255,255,.08);background:rgba(255,255,255,.03);">C++ Basics</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══ Entry 3: 10th Grade ═══ -->
+    <div class="tl-entry" data-tl style="transition-delay:.22s;">
+      <div class="tl-node done">'19</div>
+      <div class="tl-stub"></div>
+      <div class="tl-card done-card">
+
+        <div class="card-top">
+          <div class="card-left">
+            <div class="card-inst">Secondary School — 10th Grade</div>
+            <div class="card-degree">All Subjects &nbsp;·&nbsp; Academic Distinction</div>
+            <div class="badge-row">
+              <span class="badge badge-green"><i class="fa-solid fa-trophy" style="font-size:.6rem;"></i>92.2%</span>
+              <span class="badge badge-dim">CBSE Board</span>
+              <span class="badge badge-amber">Distinction</span>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="status-pill status-done">Completed</div>
+          </div>
+        </div>
+
+        <p class="card-desc">
+          Achieved academic excellence with <strong style="color:rgba(255,255,255,.75);">92.2% — distinction level</strong> performance across all subjects,
+          demonstrating the discipline and focus that continues to define the academic journey.
+        </p>
+
+      </div>
+    </div>
+
+  </div><!-- /timeline -->
+
+  <!-- stats strip -->
+  <div class="edu-stats" style="margin-top:32px;">
+    <div class="edu-stat" data-stat style="transition-delay:.05s;">
+      <div class="stat-n">9.09<span class="c"> /10</span></div>
+      <div class="stat-l">B.Tech CGPA</div>
+    </div>
+    <div class="edu-stat" data-stat style="transition-delay:.12s;">
+      <div class="stat-n"><span class="g">92.2</span><span style="font-size:1rem;color:var(--green);">%</span></div>
+      <div class="stat-l">10th Score</div>
+    </div>
+    <div class="edu-stat" data-stat style="transition-delay:.18s;">
+      <div class="stat-n"><span class="g">85.6</span><span style="font-size:1rem;color:var(--green);">%</span></div>
+      <div class="stat-l">12th Score</div>
+    </div>
+    <div class="edu-stat" data-stat style="transition-delay:.24s;">
+      <div class="stat-n">3<span class="c">×</span></div>
+      <div class="stat-l">Internships</div>
+    </div>
+  </div>
+
+</section>
+
+<section id="projects">
+
+  <!-- Backgrounds (one per project) -->
+  <div class="proj-bg proj-bg-0 active"></div>
+  <div class="proj-bg proj-bg-2"></div>
+  <div class="proj-bg proj-bg-1"></div>
+  <div class="proj-bg proj-bg-3"></div>
+
+  <!-- Glow orbs -->
+  <div class="proj-orb proj-orb-0 active"></div>
+  <div class="proj-orb proj-orb-1"></div>
+  <div class="proj-orb proj-orb-2"></div>
+  <div class="proj-orb proj-orb-3"></div>
+
+  <!-- Heading (always on top) -->
+  <div class="proj-heading">
+    <div class="proj-eyebrow">
+      <span class="ey-index">04</span>
+      <div class="ey-line"></div>
+      <span class="ey-tag">What I've built</span>
+    </div>
+    <h2 class="proj-title">Featured <span class="cyan">Projects.</span></h2>
+  </div>
+
+  <!-- ══ THE CLIPPING VIEWPORT ══ -->
+  <div class="slides-viewport">
+    <div class="slides-track" id="slidesTrack">
+
+      <!-- ━━━ SLIDE 0: Project Eidolon ━━━ -->
+      <div class="slide">
+        <div class="proj-info">
+          <div class="proj-cat" style="color:#00d4ff;">
+            <span class="cat-dot" style="background:#00d4ff;"></span>
+            Cybersecurity · AI
+          </div>
+          <div class="proj-special" style="background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.22);color:#00d4ff;">
+            <i class="fa-solid fa-shield-halved" style="font-size:.6rem;"></i>Project Eidolon
+          </div>
+          <h2 class="proj-name">AI-Cyber<br>Deception<span class="accent">Network</span></h2>
+          <p class="proj-desc">An advanced cyber deception system deploying <strong>50+ AI-generated honeypot servers</strong> via Docker Swarm. Uses <strong>Mistral 7B LLM</strong> to simulate realistic server traffic, a <strong>FastAPI orchestrator</strong> for dynamic configuration, and ELK stack for real-time intrusion analytics.</p>
+          <div class="proj-stack">
+            <span class="stack-pill">Docker Swarm</span><span class="stack-pill">Mistral 7B</span>
+            <span class="stack-pill">FastAPI</span><span class="stack-pill">Python</span>
+            <span class="stack-pill">ELK Stack</span><span class="stack-pill">Groq</span>
+          </div>
+          <div class="proj-btns">
+            <a href="https://github.com/ArpitMakkar12/project-eidolon" target="_blank" class="pbtn pbtn-outline"><i class="fa-brands fa-github"></i>View Code</a>
+            <a href="https://github.com/ArpitMakkar12/project-eidolon" target="_blank" class="pbtn pbtn-fill" style="background:linear-gradient(135deg,#005580,#00bcd4);box-shadow:0 4px 18px rgba(0,188,212,.3);"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</a>
+          </div>
+        </div>
+        <div class="proj-visual">
+          <div class="browser-frame" style="--proj-accent:#00d4ff;">
+            <div class="browser-bar">
+              <div class="bw-dot bw-dot-r"></div><div class="bw-dot bw-dot-y"></div><div class="bw-dot bw-dot-g"></div>
+              <div class="bw-url">eidolon.local:8080/dashboard</div>
+            </div>
+            <div class="browser-body">
+              <div class="vis-row">
+                <div class="vis-bar a" style="max-width:42%;"></div>
+                <div class="vis-bar" style="max-width:22%;"></div>
+                <div style="margin-left:auto;"><div class="vis-tag" style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:#22c55e;"><span style="width:5px;height:5px;border-radius:50%;background:#22c55e;display:inline-block;margin-right:5px;animation:catPulse 2s infinite;"></span>Network Live</div></div>
+              </div>
+              <div class="vis-grid3">
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#00d4ff;">50+</div><div class="vis-metric-lbl">Honeypots</div></div>
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#f87171;">3</div><div class="vis-metric-lbl">Blocked</div></div>
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#22c55e;">99.2%</div><div class="vis-metric-lbl">Uptime</div></div>
+              </div>
+              <div class="vis-block" style="padding:10px;">
+                <div style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.3);margin-bottom:6px;">Live Threat Log</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:rgba(248,113,113,.7);margin-bottom:3px;">[BLOCKED] 192.168.1.44 — SSH brute-force</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:rgba(251,191,36,.6);margin-bottom:3px;">[ALERT]&nbsp;&nbsp; 10.0.0.12 — Port scan detected</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:rgba(34,197,94,.65);">[DECOY]&nbsp;&nbsp; Honeypot 07 responding…</div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                <div class="vis-block" style="padding:10px;"><div class="vis-bar a" style="margin-bottom:5px;"></div><div class="vis-bar" style="width:70%;"></div></div>
+                <div class="vis-block" style="padding:10px;"><div class="vis-bar a" style="width:55%;margin-bottom:5px;"></div><div class="vis-bar" style="width:82%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ━━━ SLIDE 1: EV Infrastructure ━━━ -->
+      <div class="slide">
+        <div class="proj-info">
+          <div class="proj-cat" style="color:#4ade80;">
+            <span class="cat-dot" style="background:#4ade80;"></span>
+            ML · Data Science
+          </div>
+          <h2 class="proj-name">EV Infrastructure<br><span class="accent">Optimization</span></h2>
+          <p class="proj-desc">A decision-support tool for <strong>EV charging station planning</strong> across India — integrating an <strong>ML demand forecasting pipeline</strong> and <strong>Genetic Algorithms</strong> for multi-objective site selection, built during a Data Science Internship at Sabudh Foundation (STPI).</p>
+          <div class="proj-stack">
+            <span class="stack-pill">Python</span><span class="stack-pill">Pandas</span>
+            <span class="stack-pill">NumPy</span><span class="stack-pill">Scikit-learn</span>
+            <span class="stack-pill">Genetic Algorithms</span>
+          </div>
+          <div class="proj-btns">
+            <a href="https://github.com/ArpitMakkar12/EV-Infrastructure-Optimization-and-Planning" target="_blank" class="pbtn pbtn-outline"><i class="fa-brands fa-github"></i>View Code</a>
+            <a href="https://arpitmakkar12.github.io/EV-Infrastructure-Optimization-and-Planning/" target="_blank" class="pbtn pbtn-fill" style="background:linear-gradient(135deg,#14532d,#16a34a);box-shadow:0 4px 18px rgba(74,222,128,.3);"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</a>
+          </div>
+        </div>
+        <div class="proj-visual">
+          <div class="browser-frame" style="--proj-accent:#4ade80;">
+            <div class="browser-bar">
+              <div class="bw-dot bw-dot-r"></div><div class="bw-dot bw-dot-y"></div><div class="bw-dot bw-dot-g"></div>
+              <div class="bw-url">ev-optimizer/api/v1/site-analysis</div>
+            </div>
+            <div class="browser-body">
+              <div class="vis-row">
+                <div class="vis-bar" style="max-width:42%;background:#4ade80;opacity:.45;"></div>
+                <div style="margin-left:auto;"><div class="vis-tag" style="background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.2);color:#4ade80;">Sabudh · STPI</div></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:7px;">
+                <div>
+                  <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                    <span style="font-size:.6rem;color:rgba(255,255,255,.45);">Demand Forecasting — ML Model</span>
+                    <span style="font-size:.6rem;color:#4ade80;">92% acc</span>
+                  </div>
+                  <div style="height:4px;border-radius:2px;background:rgba(255,255,255,.07);">
+                    <div style="height:100%;width:92%;border-radius:2px;background:linear-gradient(90deg,#4ade80,rgba(74,222,128,.3));"></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                    <span style="font-size:.6rem;color:rgba(255,255,255,.45);">Site Selection — Genetic Algorithm</span>
+                    <span style="font-size:.6rem;color:#4ade80;">optimised</span>
+                  </div>
+                  <div style="height:4px;border-radius:2px;background:rgba(255,255,255,.07);">
+                    <div style="height:100%;width:80%;border-radius:2px;background:linear-gradient(90deg,#4ade80,rgba(74,222,128,.3));"></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                    <span style="font-size:.6rem;color:rgba(255,255,255,.45);">Data Pipeline — Cleaning & Feature Eng.</span>
+                    <span style="font-size:.6rem;color:#4ade80;">automated</span>
+                  </div>
+                  <div style="height:4px;border-radius:2px;background:rgba(255,255,255,.07);">
+                    <div style="height:100%;width:70%;border-radius:2px;background:linear-gradient(90deg,#4ade80,rgba(74,222,128,.3));"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="vis-grid3">
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#4ade80;">6 Mo</div><div class="vis-metric-lbl">Research</div></div>
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#4ade80;">3</div><div class="vis-metric-lbl">ML Models</div></div>
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#22c55e;">↑ India</div><div class="vis-metric-lbl">EV Impact</div></div>
+              </div>
+              <div class="vis-block" style="padding:8px;font-family:'JetBrains Mono',monospace;font-size:.58rem;color:rgba(74,222,128,.55);">
+                GET /api/site-score?region=AP → 200 OK [optimal]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ━━━ SLIDE 2: Citadel Maps ━━━ -->
+      <div class="slide">
+        <div class="proj-info">
+          <div class="proj-cat" style="color:#a78bfa;">
+            <span class="cat-dot" style="background:#a78bfa;"></span>
+            Safety Tech · Data Viz
+          </div>
+          <div class="proj-special" style="background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25);color:#a78bfa;">
+            <i class="fa-solid fa-trophy" style="font-size:.6rem;"></i>CodeStorm 2025 — Hackathon Winner
+          </div>
+          <h2 class="proj-name">Citadel<br>Maps<span class="accent">Women's Safety Platform</span></h2>
+          <p class="proj-desc">AI-powered street safety heatmap enhancing urban safety for women. Analyses crime data patterns to generate <strong>real-time safety scores</strong> across city zones, visualised as an interactive heatmap overlay.</p>
+          <div class="proj-stack">
+            <span class="stack-pill">Python</span><span class="stack-pill">AI / ML</span>
+            <span class="stack-pill">Data Visualization</span><span class="stack-pill">Maps API</span>
+            <span class="stack-pill">React.js</span>
+          </div>
+          <div class="proj-btns">
+            <a href="https://github.com/ArpitMakkar12/Citadel-Maps" target="_blank" class="pbtn pbtn-outline"><i class="fa-brands fa-github"></i>View Code</a>
+            <a href="https://arpitmakkar12.github.io/Citadel-Maps/" target="_blank" class="pbtn pbtn-fill" style="background:linear-gradient(135deg,#4c0080,#9333ea);box-shadow:0 4px 18px rgba(147,51,234,.3);"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</a>
+          </div>
+        </div>
+        <div class="proj-visual">
+          <div class="browser-frame" style="--proj-accent:#a78bfa;">
+            <div class="browser-bar">
+              <div class="bw-dot bw-dot-r"></div><div class="bw-dot bw-dot-y"></div><div class="bw-dot bw-dot-g"></div>
+              <div class="bw-url">citadel-maps.vercel.app</div>
+            </div>
+            <div class="browser-body">
+              <div class="vis-row">
+                <div class="vis-bar" style="max-width:45%;background:#a78bfa;opacity:.4;"></div>
+                <div style="margin-left:auto;"><div class="vis-tag" style="background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.22);color:#a78bfa;">🏆 Hackathon Winner</div></div>
+              </div>
+              <div class="vis-block" style="padding:10px;height:110px;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(4,1fr);gap:3px;">
+                <div style="border-radius:3px;background:rgba(248,113,113,.65);"></div><div style="border-radius:3px;background:rgba(248,113,113,.35);"></div><div style="border-radius:3px;background:rgba(251,191,36,.45);"></div><div style="border-radius:3px;background:rgba(34,197,94,.55);"></div><div style="border-radius:3px;background:rgba(34,197,94,.75);"></div><div style="border-radius:3px;background:rgba(34,197,94,.4);"></div>
+                <div style="border-radius:3px;background:rgba(251,191,36,.5);"></div><div style="border-radius:3px;background:rgba(248,113,113,.75);"></div><div style="border-radius:3px;background:rgba(248,113,113,.4);"></div><div style="border-radius:3px;background:rgba(251,191,36,.6);"></div><div style="border-radius:3px;background:rgba(34,197,94,.65);"></div><div style="border-radius:3px;background:rgba(34,197,94,.35);"></div>
+                <div style="border-radius:3px;background:rgba(34,197,94,.55);"></div><div style="border-radius:3px;background:rgba(251,191,36,.35);"></div><div style="border-radius:3px;background:rgba(248,113,113,.5);"></div><div style="border-radius:3px;background:rgba(167,139,250,.4);"></div><div style="border-radius:3px;background:rgba(34,197,94,.7);"></div><div style="border-radius:3px;background:rgba(34,197,94,.5);"></div>
+                <div style="border-radius:3px;background:rgba(248,113,113,.3);"></div><div style="border-radius:3px;background:rgba(251,191,36,.55);"></div><div style="border-radius:3px;background:rgba(34,197,94,.45);"></div><div style="border-radius:3px;background:rgba(34,197,94,.65);"></div><div style="border-radius:3px;background:rgba(251,191,36,.3);"></div><div style="border-radius:3px;background:rgba(167,139,250,.5);"></div>
+              </div>
+              <div style="display:flex;gap:10px;align-items:center;padding:2px 0;">
+                <div style="display:flex;align-items:center;gap:4px;"><div style="width:8px;height:8px;border-radius:2px;background:rgba(248,113,113,.7);"></div><span style="font-size:.58rem;color:rgba(255,255,255,.35);">High Risk</span></div>
+                <div style="display:flex;align-items:center;gap:4px;"><div style="width:8px;height:8px;border-radius:2px;background:rgba(251,191,36,.6);"></div><span style="font-size:.58rem;color:rgba(255,255,255,.35);">Moderate</span></div>
+                <div style="display:flex;align-items:center;gap:4px;"><div style="width:8px;height:8px;border-radius:2px;background:rgba(34,197,94,.6);"></div><span style="font-size:.58rem;color:rgba(255,255,255,.35);">Safe Zone</span></div>
+              </div>
+              <div class="vis-grid3">
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#a78bfa;">24</div><div class="vis-metric-lbl">Zones</div></div>
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#22c55e;">68%</div><div class="vis-metric-lbl">Safe Areas</div></div>
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#fbbf24;">Live</div><div class="vis-metric-lbl">Data Feed</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ━━━ SLIDE 3: SwarSmriti ━━━ -->
+      <div class="slide">
+        <div class="proj-info">
+          <div class="proj-cat" style="color:#fbbf24;">
+            <span class="cat-dot" style="background:#fbbf24;"></span>
+            AI · Voice · Memory
+          </div>
+          <div class="proj-special" style="background:rgba(34,197,94,.1);border:1px solid rgba(217,119,6,.3);color:#fbbf24;">
+            <i class="fa-brands fa-google" style="font-size:.6rem;"></i>Google CodeClash Finalist
+          </div>
+          <h2 class="proj-name">Swar<br>Smriti<span class="accent">AI Memory Companion</span></h2>
+          <p class="proj-desc">An <strong>AI-powered voice companion</strong> that captures and preserves personal memories through natural conversation. Uses <strong>RAG</strong> with ChromaDB for semantic memory retrieval and Cohere LLM for natural dialogue.</p>
+          <div class="proj-stack">
+            <span class="stack-pill">Cohere LLM</span><span class="stack-pill">RAG</span>
+            <span class="stack-pill">ChromaDB</span><span class="stack-pill">Python</span>
+            <span class="stack-pill">FastAPI</span><span class="stack-pill">Web Speech API</span>
+          </div>
+          <div class="proj-btns">
+            <a href="https://github.com/ArpitMakkar12/SwarSmriti" target="_blank" class="pbtn pbtn-outline"><i class="fa-brands fa-github"></i>View Code</a>
+            <a href="https://swarsmriti-1.onrender.com/" target="_blank" class="pbtn pbtn-fill" style="background:linear-gradient(135deg,#78350f,#d97706);box-shadow:0 4px 18px rgba(5,150,105,.3);"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</a>
+          </div>
+        </div>
+        <div class="proj-visual">
+          <div class="browser-frame" style="--proj-accent:#22c55e;">
+            <div class="browser-bar">
+              <div class="bw-dot bw-dot-r"></div><div class="bw-dot bw-dot-y"></div><div class="bw-dot bw-dot-g"></div>
+              <div class="bw-url">swarsmriti.app/companion</div>
+            </div>
+            <div class="browser-body">
+              <div class="vis-row">
+                <div class="vis-bar" style="max-width:38%;background:#22c55e;opacity:.45;"></div>
+                <div style="margin-left:auto;"><div class="vis-tag" style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.22);color:#22c55e;"><span style="width:5px;height:5px;border-radius:50%;background:#22c55e;display:inline-block;margin-right:5px;animation:catPulse 2s infinite;"></span>Listening…</div></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="align-self:flex-end;padding:7px 12px;border-radius:12px 12px 2px 12px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.18);font-size:.67rem;color:rgba(255,255,255,.7);max-width:78%;">Tell me about that trip to Shimla…</div>
+                <div style="align-self:flex-start;padding:7px 12px;border-radius:12px 12px 12px 2px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);font-size:.67rem;color:rgba(255,255,255,.52);max-width:84%;">I remember you mentioned the fog-covered valleys in October 2023. Shall I recall the full memory?</div>
+                <div style="align-self:flex-end;padding:7px 12px;border-radius:12px 12px 2px 12px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.18);font-size:.67rem;color:rgba(255,255,255,.7);max-width:55%;">Yes, play it back.</div>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:center;gap:3px;padding:6px 0 2px;">
+                <div style="width:3px;background:rgba(34,197,94,.4);border-radius:2px;height:8px;animation:wave 1.2s ease-in-out infinite 0s;"></div>
+                <div style="width:3px;background:rgba(34,197,94,.55);border-radius:2px;height:14px;animation:wave 1.2s ease-in-out infinite .1s;"></div>
+                <div style="width:3px;background:rgba(34,197,94,.75);border-radius:2px;height:22px;animation:wave 1.2s ease-in-out infinite .2s;"></div>
+                <div style="width:3px;background:rgba(34,197,94,.95);border-radius:2px;height:30px;animation:wave 1.2s ease-in-out infinite .3s;"></div>
+                <div style="width:3px;background:rgba(34,197,94,.75);border-radius:2px;height:22px;animation:wave 1.2s ease-in-out infinite .4s;"></div>
+                <div style="width:3px;background:rgba(34,197,94,.55);border-radius:2px;height:14px;animation:wave 1.2s ease-in-out infinite .5s;"></div>
+                <div style="width:3px;background:rgba(34,197,94,.4);border-radius:2px;height:8px;animation:wave 1.2s ease-in-out infinite .6s;"></div>
+              </div>
+              <div class="vis-grid3">
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#fbbf24;">48</div><div class="vis-metric-lbl">Memories</div></div>
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#fbbf24;">RAG</div><div class="vis-metric-lbl">Retrieval</div></div>
+                <div class="vis-metric"><div class="vis-metric-val" style="color:#22c55e;">92%</div><div class="vis-metric-lbl">Recall Acc.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /slides-track -->
+  </div><!-- /slides-viewport -->
+
+  <!-- Controls -->
+  <div class="proj-controls">
+    <div class="prog-left">
+      <div class="prog-counter">
+        <span id="progCur">01</span><span class="tot"> / 04</span>
+      </div>
+      <div class="prog-dots" id="progDots">
+        <div class="prog-dot active" data-idx="0"></div>
+        <div class="prog-dot" data-idx="1"></div>
+        <div class="prog-dot" data-idx="2"></div>
+        <div class="prog-dot" data-idx="3"></div>
+      </div>
+    </div>
+    <div class="proj-arrows">
+      <button class="nav-btn" id="prevBtn" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="nav-btn" id="nextBtn" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+</section>
+
+
+<section id="skills">
+
+  <!-- Heading -->
+  <div class="skill-head" data-reveal>
+    <div class="skill-eyebrow">
+      <span class="ey-line-r"></span>
+      <span class="ey-index">05</span>
+      <span class="ey-tag">Skill Universe</span>
+      <span class="ey-index">——</span>
+      <span class="ey-line"></span>
+    </div>
+    <h2 class="skill-title">Tech <span class="cyan">Skills.</span></h2>
+    <p class="skill-sub">27 skills · 5 categories · orbiting since 2023</p>
+  </div>
+
+  <p class="pause-hint">↑ click the sun to pause / resume</p>
+
+  <!-- Solar System -->
+  <div class="solar-outer" data-reveal style="transition-delay:.1s;">
+    <div class="solar-wrap" id="solarWrap">
+
+      <!-- Star background -->
+      <canvas id="star-canvas" width="840" height="840"></canvas>
+
+      <!-- Orbit rings (built by JS) -->
+      <!-- Planets (built by JS) -->
+
+      <!-- Sun -->
+      <div class="sun" id="sun">
+        <div class="sun-pulse"></div>
+        <div class="sun-pulse"></div>
+        <div class="sun-pulse"></div>
+        <div class="sun-core">
+          <div class="sun-initials">AM</div>
+          <div class="sun-label">arpit.dev</div>
+        </div>
+        <div class="sun-paused">⏸ paused</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Legend (built by JS) -->
+  <div class="skill-legend" id="legend" data-reveal style="transition-delay:.2s;"></div>
+
+  <!-- Tooltip -->
+  <div id="skill-tt">
+    <div class="tt-top">
+      <span class="tt-name" id="tt-name"></span>
+      <span class="tt-tag"  id="tt-tag"></span>
+    </div>
+    <div class="tt-bar-bg">
+      <div class="tt-bar-fill" id="tt-bar"></div>
+    </div>
+    <div class="tt-meta" id="tt-meta"></div>
+  </div>
+
+</section>
+
+<section id="experience">
+
+  <!-- Heading -->
+  <div class="section-eyebrow" data-reveal>
+    <span class="ey-index">06</span>
+    <div class="ey-line"></div>
+    <span class="ey-tag">Professional journey</span>
+  </div>
+  <h2 class="section-title" data-reveal>Work <span class="cyan">Experience.</span></h2>
+
+  <!-- Flip counter -->
+  <div class="flip-meta" id="flipMeta">
+    <div class="flip-counter">
+      <span class="count" id="flipCount">0</span> / 5 missions explored
+    </div>
+    <div class="flip-dots" id="flipDots">
+      <div class="flip-dot" data-dot="0"></div>
+      <div class="flip-dot" data-dot="1"></div>
+      <div class="flip-dot" data-dot="2"></div>
+      <div class="flip-dot" data-dot="3"></div>
+      <div class="flip-dot" data-dot="4"></div>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="cards-grid" id="cardsGrid">
+
+    <!-- ══ CARD 1: VISTEON ══ -->
+    <div class="fc-wrap" data-card="0" tabindex="0" role="button" aria-label="Visteon Corporation — click to flip">
+      <div class="fc-inner">
+
+        <!-- FRONT -->
+        <div class="fc-front" style="--accent:#00d4ff;">
+          <div class="fc-front" style="position:absolute;inset:0;border-radius:20px;background:rgba(0,212,255,.03);pointer-events:none;"></div>
+          <div style="position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,#00d4ff,transparent);opacity:.5;"></div>
+
+          <!-- Duration ring -->
+          <div class="ring-wrap">
+            <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+              <circle cx="36" cy="36" r="30" fill="none" stroke="rgba(0,212,255,.12)" stroke-width="3"/>
+              <!-- 5 months / 6 max → dashoffset: 188.5*(1 - 5/6) = 31 -->
+              <circle cx="36" cy="36" r="30" fill="none" stroke="#00d4ff" stroke-width="3"
+                stroke-dasharray="188.5" stroke-dashoffset="31"
+                stroke-linecap="round" transform="rotate(-90 36 36)"
+                style="filter:drop-shadow(0 0 4px rgba(0,212,255,.6));"/>
+            </svg>
+            <div class="ring-center">
+              <span class="ring-num" style="color:#00d4ff;">5</span>
+              <span class="ring-unit">months</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="fc-company">Visteon<br>Corporation</div>
+            <div class="fc-role">Scholar Intern</div>
+          </div>
+
+          <div class="fc-pills">
+            <div class="fc-pill" style="background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.25);color:#22c55e;">
+              <i class="fa-solid fa-circle" style="font-size:.4rem;margin-right:5px;"></i>Live · Jan 2026 – Present
+            </div>
+            <div class="fc-pill" style="background:rgba(0,212,255,.07);border-color:rgba(0,212,255,.18);color:rgba(0,212,255,.7);">
+              Automotive AI
+            </div>
+          </div>
+
+          <div class="fc-hint">click to flip</div>
+        </div>
+
+        <!-- BACK -->
+        <div class="fc-back">
+          <div style="position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,#00d4ff,transparent);opacity:.45;"></div>
+
+          <div class="back-head">
+            <div>
+              <div class="back-co">Visteon Corporation</div>
+              <div class="back-date">Jan 2026 – Present · 5 months</div>
+            </div>
+            <span style="padding:3px 9px;border-radius:20px;font-size:.6rem;font-weight:500;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);color:#22c55e;white-space:nowrap;flex-shrink:0;">Live</span>
+          </div>
+
+          <div class="domain-strip" style="background:rgba(0,212,255,.06);border-color:rgba(0,212,255,.18);">
+            <span class="domain-lbl">Domain</span>
+            <span style="color:#00d4ff;font-weight:500;">Automotive Engineering & Automobiles</span>
+          </div>
+
+          <div class="contribs">
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#00d4ff;"></div>
+              <span class="contrib-text">Competitive selection via Visteon Scholar Programme — global automotive technology leader</span>
+            </div>
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#00d4ff;"></div>
+              <span class="contrib-text">Working on connected vehicle software & cockpit HMI electronics development</span>
+            </div>
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#00d4ff;"></div>
+              <span class="contrib-text">Collaborating with senior engineers on next-gen in-vehicle infotainment systems</span>
+            </div>
+          </div>
+
+          <div class="back-sep"></div>
+          <div class="tech-row">
+            <span class="tech-pill">C++</span>
+            <span class="tech-pill">Embedded Systems</span>
+            <span class="tech-pill">HMI</span>
+            <span class="tech-pill">Automotive SW</span>
+            <span class="tech-pill">Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ CARD 2: SABUDH ══ -->
+    <div class="fc-wrap" data-card="1" tabindex="0" role="button" aria-label="Sabudh Foundation — click to flip">
+      <div class="fc-inner">
+
+        <!-- FRONT -->
+        <div class="fc-front">
+          <div style="position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,#fbbf24,transparent);opacity:.5;"></div>
+
+          <div class="ring-wrap">
+            <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+              <circle cx="36" cy="36" r="30" fill="none" stroke="rgba(251,191,36,.12)" stroke-width="3"/>
+              <circle cx="36" cy="36" r="30" fill="none" stroke="#fbbf24" stroke-width="3"
+                stroke-dasharray="188.5" stroke-dashoffset="18"
+                stroke-linecap="round" transform="rotate(-90 36 36)"
+                style="filter:drop-shadow(0 0 4px rgba(251,191,36,.55));"/>
+            </svg>
+            <div class="ring-center">
+              <span class="ring-num" style="color:#fbbf24;">6</span>
+              <span class="ring-unit">months</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="fc-company">Sabudh<br>Foundation</div>
+            <div class="fc-role">Data Science Intern</div>
+          </div>
+
+          <div class="fc-pills">
+            <div class="fc-pill" style="background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.22);color:#fbbf24;">
+              Jul 2025 – Dec 2025
+            </div>
+            <div class="fc-pill" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.5);">
+              STPI · Govt. of India
+            </div>
+          </div>
+
+          <div class="fc-hint">click to flip</div>
+        </div>
+
+        <!-- BACK -->
+        <div class="fc-back">
+          <div style="position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,#fbbf24,transparent);opacity:.45;"></div>
+
+          <div class="back-head">
+            <div>
+              <div class="back-co">Sabudh Foundation</div>
+              <div class="back-date">Jul 2025 – Dec 2025 · 6 months</div>
+            </div>
+            <span style="padding:3px 9px;border-radius:20px;font-size:.6rem;font-weight:500;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);white-space:nowrap;flex-shrink:0;">Done</span>
+          </div>
+
+          <div class="domain-strip" style="background:rgba(251,191,36,.06);border-color:rgba(251,191,36,.18);">
+            <span class="domain-lbl">Domain</span>
+            <span style="color:#fbbf24;font-weight:500;">ML · Data Science · EV Research</span>
+          </div>
+
+          <div class="contribs">
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#fbbf24;"></div>
+              <span class="contrib-text">Led EV infrastructure analysis — processed geographical & traffic data for optimal charging station placement</span>
+            </div>
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#fbbf24;"></div>
+              <span class="contrib-text">Engineered data cleaning pipelines using Pandas & NumPy for noisy real-world datasets; improved model accuracy</span>
+            </div>
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#fbbf24;"></div>
+              <span class="contrib-text">Contributed to SabudhFoundation open-source repo; A+ grade in DSA & SQL assessments</span>
+            </div>
+          </div>
+
+          <div class="back-sep"></div>
+          <div class="tech-row">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">NumPy</span>
+            <span class="tech-pill">Machine Learning</span>
+            <span class="tech-pill">SQL</span>
+            <span class="tech-pill">GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ CARD 3: GDG VIT-AP ══ -->
+    <div class="fc-wrap" data-card="2" tabindex="0" role="button" aria-label="Google Developer Group VIT-AP — click to flip">
+      <div class="fc-inner">
+
+        <!-- FRONT -->
+        <div class="fc-front">
+          <div style="position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,#22c55e,transparent);opacity:.5;"></div>
+
+          <div class="ring-wrap">
+            <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+              <circle cx="36" cy="36" r="30" fill="none" stroke="rgba(34,197,94,.12)" stroke-width="3"/>
+              <!-- 1yr 7mos ≈ 19 months — ring nearly full (capped at 12 for visual) → dashoffset: 188.5*(1 - 12/12) = 0 -->
+              <circle cx="36" cy="36" r="30" fill="none" stroke="#22c55e" stroke-width="3"
+                stroke-dasharray="188.5" stroke-dashoffset="10"
+                stroke-linecap="round" transform="rotate(-90 36 36)"
+                style="filter:drop-shadow(0 0 4px rgba(34,197,94,.55));"/>
+            </svg>
+            <div class="ring-center">
+              <span class="ring-num" style="color:#22c55e;">1.5+</span>
+              <span class="ring-unit">years</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="fc-company">Google Dev<br>Group VIT-AP</div>
+            <div class="fc-role">Web & App Dev Team Member</div>
+          </div>
+
+          <div class="fc-pills">
+            <div class="fc-pill" style="background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.25);color:#22c55e;">
+              <i class="fa-solid fa-circle" style="font-size:.4rem;margin-right:5px;"></i>Live · Nov 2024 – Present
+            </div>
+            <div class="fc-pill" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.5);">
+              React · Tailwind · Core Team
+            </div>
+          </div>
+
+          <div class="fc-hint">click to flip</div>
+        </div>
+
+        <!-- BACK -->
+        <div class="fc-back">
+          <div style="position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,#22c55e,transparent);opacity:.45;"></div>
+
+          <div class="back-head">
+            <div>
+              <div class="back-co">GDG VIT-AP</div>
+              <div class="back-date">Nov 2024 – Present · 1 yr 7 mos</div>
+            </div>
+            <span style="padding:3px 9px;border-radius:20px;font-size:.6rem;font-weight:500;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);color:#22c55e;white-space:nowrap;flex-shrink:0;">Live</span>
+          </div>
+
+          <div class="domain-strip" style="background:rgba(34,197,94,.06);border-color:rgba(34,197,94,.18);">
+            <span class="domain-lbl">Domain</span>
+            <span style="color:#22c55e;font-weight:500;">Frontend · Web & App Development</span>
+          </div>
+
+          <div class="contribs">
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#22c55e;"></div>
+              <span class="contrib-text">Collaborated with GDG VIT-AP Web & App Development team to build the official club website</span>
+            </div>
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#22c55e;"></div>
+              <span class="contrib-text">Independently designed & developed the Feedback Page of Events Section using ReactJS & Tailwind CSS</span>
+            </div>
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#22c55e;"></div>
+              <span class="contrib-text">Awarded Core Team Certificate; ongoing collaboration on design system & component architecture</span>
+            </div>
+          </div>
+
+          <div class="back-sep"></div>
+          <div class="tech-row">
+            <span class="tech-pill">ReactJS</span>
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS</span>
+            <span class="tech-pill">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ CARD 4: SEDS VIT-AP ══ -->
+    <div class="fc-wrap" data-card="3" tabindex="0" role="button" aria-label="SEDS VIT-AP — click to flip">
+      <div class="fc-inner">
+
+        <!-- FRONT -->
+        <div class="fc-front">
+          <div style="position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,#a78bfa,transparent);opacity:.5;"></div>
+
+          <div class="ring-wrap">
+            <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+              <circle cx="36" cy="36" r="30" fill="none" stroke="rgba(167,139,250,.12)" stroke-width="3"/>
+              <!-- 1yr 8mos ≈ 20 months → ring full -->
+              <circle cx="36" cy="36" r="30" fill="none" stroke="#a78bfa" stroke-width="3"
+                stroke-dasharray="188.5" stroke-dashoffset="10"
+                stroke-linecap="round" transform="rotate(-90 36 36)"
+                style="filter:drop-shadow(0 0 4px rgba(167,139,250,.55));"/>
+            </svg>
+            <div class="ring-center">
+              <span class="ring-num" style="color:#a78bfa;">1.5+</span>
+              <span class="ring-unit">years</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="fc-company">SEDS<br>VIT-AP</div>
+            <div class="fc-role">Technical Team Lead</div>
+          </div>
+
+          <div class="fc-pills">
+            <div class="fc-pill" style="background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.25);color:#a78bfa;">
+              <i class="fa-solid fa-circle" style="font-size:.4rem;margin-right:5px;"></i>Live · Oct 2024 – Present
+            </div>
+            <div class="fc-pill" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.5);">
+              Space · Tech · Web
+            </div>
+          </div>
+
+          <div class="fc-hint">click to flip</div>
+        </div>
+
+        <!-- BACK -->
+        <div class="fc-back">
+          <div style="position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,#a78bfa,transparent);opacity:.45;"></div>
+
+          <div class="back-head">
+            <div>
+              <div class="back-co">SEDS VIT-AP</div>
+              <div class="back-date">Oct 2024 – Present · 1 yr 8 mos</div>
+            </div>
+            <span style="padding:3px 9px;border-radius:20px;font-size:.6rem;font-weight:500;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.25);color:#a78bfa;white-space:nowrap;flex-shrink:0;">Live</span>
+          </div>
+
+          <div class="domain-strip" style="background:rgba(167,139,250,.06);border-color:rgba(167,139,250,.18);">
+            <span class="domain-lbl">Domain</span>
+            <span style="color:#a78bfa;font-weight:500;">Web Development · Team Management</span>
+          </div>
+
+          <div class="contribs">
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#a78bfa;"></div>
+              <span class="contrib-text">Promoted to Technical Team Lead (Oct 2025) after serving as Technical Team Member since Oct 2024</span>
+            </div>
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#a78bfa;"></div>
+              <span class="contrib-text">Contributed to redesign & update of the official SEDS VIT-AP website, enhancing UI/UX and responsiveness</span>
+            </div>
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#a78bfa;"></div>
+              <span class="contrib-text">Developed and maintained web components using HTML, CSS and JavaScript; leading technical initiatives</span>
+            </div>
+          </div>
+
+          <div class="back-sep"></div>
+          <div class="tech-row">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Management</span>
+            <span class="tech-pill">Leadership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ CARD 5: BEAT THE HEAT VIT-AP ══ -->
+    <div class="fc-wrap" data-card="4" tabindex="0" role="button" aria-label="Beat The Heat VIT-AP — click to flip">
+      <div class="fc-inner">
+
+        <!-- FRONT -->
+        <div class="fc-front">
+          <div style="position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,#f472b6,transparent);opacity:.5;"></div>
+
+          <div class="ring-wrap">
+            <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+              <circle cx="36" cy="36" r="30" fill="none" stroke="rgba(244,114,182,.12)" stroke-width="3"/>
+              <!-- 2yr 8mos → ring full -->
+              <circle cx="36" cy="36" r="30" fill="none" stroke="#f472b6" stroke-width="3"
+                stroke-dasharray="188.5" stroke-dashoffset="5"
+                stroke-linecap="round" transform="rotate(-90 36 36)"
+                style="filter:drop-shadow(0 0 4px rgba(244,114,182,.55));"/>
+            </svg>
+            <div class="ring-center">
+              <span class="ring-num" style="color:#f472b6;">2.5+</span>
+              <span class="ring-unit">years</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="fc-company">Beat The Heat<br>VIT-AP</div>
+            <div class="fc-role">Vice President</div>
+          </div>
+
+          <div class="fc-pills">
+            <div class="fc-pill" style="background:rgba(244,114,182,.1);border-color:rgba(244,114,182,.25);color:#f472b6;">
+              <i class="fa-solid fa-circle" style="font-size:.4rem;margin-right:5px;"></i>Live · Oct 2023 – Present
+            </div>
+            <div class="fc-pill" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.5);">
+              Dance · Management
+            </div>
+          </div>
+
+          <div class="fc-hint">click to flip</div>
+        </div>
+
+        <!-- BACK -->
+        <div class="fc-back">
+          <div style="position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,#f472b6,transparent);opacity:.45;"></div>
+
+          <div class="back-head">
+            <div>
+              <div class="back-co">Beat The Heat VIT-AP</div>
+              <div class="back-date">Oct 2023 – Present · 2 yrs 8 mos</div>
+            </div>
+            <span style="padding:3px 9px;border-radius:20px;font-size:.6rem;font-weight:500;background:rgba(244,114,182,.1);border:1px solid rgba(244,114,182,.25);color:#f472b6;white-space:nowrap;flex-shrink:0;">Live</span>
+          </div>
+
+          <div class="domain-strip" style="background:rgba(244,114,182,.06);border-color:rgba(244,114,182,.18);">
+            <span class="domain-lbl">Domain</span>
+            <span style="color:#f472b6;font-weight:500;">Dance · Event Management</span>
+          </div>
+
+          <div class="contribs">
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#f472b6;"></div>
+              <span class="contrib-text">Promoted to Vice President (Oct 2025) after serving as Crew Member since Oct 2023</span>
+            </div>
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#f472b6;"></div>
+              <span class="contrib-text">Leading event planning, choreography coordination and team management for the university dance crew</span>
+            </div>
+            <div class="contrib-item">
+              <div class="contrib-dot" style="background:#f472b6;"></div>
+              <span class="contrib-text">Managing cross-functional collaboration across creative, logistics and outreach teams for cultural events</span>
+            </div>
+          </div>
+
+          <div class="back-sep"></div>
+          <div class="tech-row">
+            <span class="tech-pill">Management</span>
+            <span class="tech-pill">Leadership</span>
+            <span class="tech-pill">Dance</span>
+            <span class="tech-pill">Event Planning</span>
+            <span class="tech-pill">Team Building</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /cards-grid -->
+
+  <!-- All-done celebration -->
+  <div class="all-done" id="allDone">
+    <div class="all-done-inner">
+      <i class="fa-solid fa-check-circle" style="color:#22c55e;"></i>
+      5 / 5 missions explored — full career stack reviewed
+    </div>
+  </div>
+
+</section>
+
+<section id="certification">
+
+  <!-- Background tints (one per card, crossfade on navigate) -->
+  <div class="cert-bg cert-bg-0 active"></div>
+  <div class="cert-bg cert-bg-1"></div>
+  <div class="cert-bg cert-bg-2"></div>
+  <div class="cert-bg cert-bg-3"></div>
+  <div class="cert-bg cert-bg-4"></div>
+  <div class="cert-bg cert-bg-5"></div>
+  <div class="cert-bg cert-bg-6"></div>
+  <div class="cert-bg cert-bg-7"></div>
+  <div class="cert-bg cert-bg-8"></div>
+  <div class="cert-bg cert-bg-9"></div>
+  <div class="cert-bg cert-bg-10"></div>
+  <div class="cert-bg cert-bg-11"></div>
+  <div class="cert-bg cert-bg-12"></div>
+  <div class="cert-bg cert-bg-13"></div>
+
+  <!-- Ambient glow orbs -->
+  <div class="cert-orb cert-orb-0 active"></div>
+  <div class="cert-orb cert-orb-1"></div>
+  <div class="cert-orb cert-orb-2"></div>
+  <div class="cert-orb cert-orb-3"></div>
+  <div class="cert-orb cert-orb-4"></div>
+  <div class="cert-orb cert-orb-5"></div>
+  <div class="cert-orb cert-orb-6"></div>
+  <div class="cert-orb cert-orb-7"></div>
+  <div class="cert-orb cert-orb-8"></div>
+  <div class="cert-orb cert-orb-9"></div>
+  <div class="cert-orb cert-orb-10"></div>
+  <div class="cert-orb cert-orb-11"></div>
+  <div class="cert-orb cert-orb-12"></div>
+  <div class="cert-orb cert-orb-13"></div>
+
+  <!-- Heading -->
+  <div class="section-eyebrow" data-reveal>
+    <span class="ey-index">07</span>
+    <div class="ey-line"></div>
+    <span class="ey-tag">Verified credentials</span>
+  </div>
+  <h2 class="section-title" data-reveal>Certifications<span class="cyan">.</span></h2>
+
+  <!-- ═══ 3D COVERFLOW CAROUSEL ═══ -->
+  <div class="cert-cf-scene" data-reveal style="transition-delay:.1s;">
+    <div class="cert-cf-stage" id="certStage">
+
+      <!-- ── 01 · Full Stack MERN ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#e65100,#ff9800);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Credential · Verified
+              </div>
+              <h3 class="cert-name">Full Stack Web Dev<br><span style="font-size:.65em;opacity:.6;">Delta Batch</span></h3>
+              <p class="cert-issuer">Apna College</p>
+              <p class="cert-desc">Comprehensive <strong>MERN stack</strong> programme — MongoDB, Express.js, React.js, Node.js. REST API design, authentication, state management, deployment.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">MongoDB</span>
+                <span class="cert-chip">Express.js</span>
+                <span class="cert-chip">React.js</span>
+                <span class="cert-chip">Node.js</span>
+                <span class="cert-chip">JWT Auth</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://drive.google.com/file/d/1F7851tkGDRKlDgMR5REMKN9hdj3w1T0b/view?usp=sharing" target="_blank" class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span class="cert-category-pill" style="background:rgba(255,152,0,.08);border-color:rgba(255,152,0,.22);color:#ff9800;">Full Stack Dev</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(255,152,0,.08);border:1px solid rgba(255,152,0,.18);">
+                <i class="fa-solid fa-code" style="color:#ff9800;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(255,152,0,.08);border-color:rgba(255,152,0,.2);color:#ff9800;">Apna College</div>
+              <div class="cert-num-label">01 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 02 · AWS Cloud Architecting ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#0060a0,#00bcd4);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Credential · Verified
+              </div>
+              <h3 class="cert-name">AWS Cloud<br>Architecting</h3>
+              <p class="cert-issuer">Amazon Web Services · Oct 2025 · 60 hrs</p>
+              <p class="cert-desc">Designing <strong>resilient, high-performing, secure, and cost-optimised architectures</strong> on AWS. Covers EC2, S3, VPC, IAM, load balancing, auto-scaling, and cloud-native design patterns.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">Cloud Architecture</span>
+                <span class="cert-chip">EC2 / S3 / VPC</span>
+                <span class="cert-chip">IAM Security</span>
+                <span class="cert-chip">Auto Scaling</span>
+                <span class="cert-chip">High Availability</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://www.credly.com/go/UacWSRFt" target="_blank" class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span class="cert-category-pill" style="background:rgba(0,212,255,.08);border-color:rgba(0,212,255,.22);color:#00d4ff;">Cloud</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(0,188,212,.1);border:1px solid rgba(0,188,212,.2);">
+                <i class="fa-brands fa-aws" style="color:#00bcd4;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(0,212,255,.08);border-color:rgba(0,212,255,.2);color:#00d4ff;">Amazon</div>
+              <div class="cert-num-label">02 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 03 · AWS Cloud Foundations ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#0077aa,#00d4ff);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Credential · Verified
+              </div>
+              <h3 class="cert-name">AWS Cloud<br>Foundations</h3>
+              <p class="cert-issuer">Amazon Web Services · Sep 2025 · 20 hrs</p>
+              <p class="cert-desc">Core <strong>AWS cloud concepts, services, security, architecture, pricing, and support</strong>. Baseline for advanced AWS certifications and cloud-first engineering.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">AWS Core Services</span>
+                <span class="cert-chip">Cloud Security</span>
+                <span class="cert-chip">Pricing Models</span>
+                <span class="cert-chip">Shared Responsibility</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://www.credly.com/go/RMccrr2H" target="_blank" class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span class="cert-category-pill" style="background:rgba(0,212,255,.08);border-color:rgba(0,212,255,.22);color:#00d4ff;">Cloud</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.18);">
+                <i class="fa-brands fa-aws" style="color:#00d4ff;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(0,212,255,.08);border-color:rgba(0,212,255,.2);color:#00d4ff;">Amazon</div>
+              <div class="cert-num-label">03 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 04 · Oracle Autonomous DB ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#b30000,#f44336);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Credential · Verified
+              </div>
+              <h3 class="cert-name">Oracle Autonomous<br>DB Professional</h3>
+              <p class="cert-issuer">Oracle University · Oct 6, 2025</p>
+              <p class="cert-desc">Expertise in <strong>Oracle Autonomous Database 2025</strong> — self-driving, self-securing cloud DB. Covers provisioning, workload types, tools, and performance tuning.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">Autonomous DB</span>
+                <span class="cert-chip">Oracle Cloud</span>
+                <span class="cert-chip">Performance Tuning</span>
+                <span class="cert-chip">SQL / PL-SQL</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://drive.google.com/file/d/1kwMxCsV26RhgG2S0655XO-7QIk85Eakj/view?usp=sharing" target="_blank"class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span class="cert-category-pill" style="background:rgba(244,67,54,.08);border-color:rgba(244,67,54,.22);color:#f44336;">Database</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(244,67,54,.08);border:1px solid rgba(244,67,54,.18);">
+                <i class="fa-solid fa-database" style="color:#f44336;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(244,67,54,.08);border-color:rgba(244,67,54,.2);color:#f44336;">Oracle</div>
+              <div class="cert-num-label">04 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 05 · Sabudh — DSA (A+) ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#b8860b,#ffd700);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Module · Verified
+              </div>
+              <h3 class="cert-name">Data Structures<br>&amp; Algorithms</h3>
+              <p class="cert-issuer">Sabudh Foundation · Data Science Batch-15 · Jul–Dec 2025</p>
+              <p class="cert-desc">Comprehensive DSA module covering <strong>arrays, trees, graphs, dynamic programming, sorting, and searching algorithms</strong>. Awarded A+ grade.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">Arrays &amp; Trees</span>
+                <span class="cert-chip">Graph Algorithms</span>
+                <span class="cert-chip">Dynamic Programming</span>
+                <span class="cert-chip">Sorting</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://drive.google.com/file/d/1tj0Q-ugDLjBDSG4EKD-zs8lniNGF4zdQ/view?usp=sharing" target="_blank" class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span style="font-family:'Syne',sans-serif;font-weight:900;font-size:1.4rem;color:#ffd700;">A+</span>
+                <span class="cert-category-pill" style="background:rgba(255,215,0,.08);border-color:rgba(255,215,0,.22);color:#ffd700;">DSA</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(255,215,0,.08);border:1px solid rgba(255,215,0,.18);">
+                <i class="fa-solid fa-sitemap" style="color:#ffd700;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(255,215,0,.08);border-color:rgba(255,215,0,.2);color:#ffd700;">Sabudh</div>
+              <div class="cert-num-label">05 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 06 · Sabudh — Python (A) ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#1a6b3c,#4caf50);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Module · Verified
+              </div>
+              <h3 class="cert-name">Python<br>Programming</h3>
+              <p class="cert-issuer">Sabudh Foundation · Data Science Batch-15 · Jul–Dec 2025</p>
+              <p class="cert-desc"><strong>Python fundamentals through advanced data science workflows</strong> — OOP, NumPy, pandas, matplotlib, file handling, and scripting. Awarded A grade.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">Python</span>
+                <span class="cert-chip">NumPy / Pandas</span>
+                <span class="cert-chip">Matplotlib</span>
+                <span class="cert-chip">OOP</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://drive.google.com/file/d/1fswvpekJJQ9GQWfVP5b4lvErbw_Gp97A/view?usp=sharing" target="_blank" class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span style="font-family:'Syne',sans-serif;font-weight:900;font-size:1.4rem;color:#4caf50;">A</span>
+                <span class="cert-category-pill" style="background:rgba(76,175,80,.08);border-color:rgba(76,175,80,.22);color:#4caf50;">Programming</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(76,175,80,.08);border:1px solid rgba(76,175,80,.18);">
+                <i class="fa-brands fa-python" style="color:#4caf50;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(76,175,80,.08);border-color:rgba(76,175,80,.2);color:#4caf50;">Sabudh</div>
+              <div class="cert-num-label">06 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 07 · Sabudh — SQL (A) ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#6a0e99,#ab47bc);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Module · Verified
+              </div>
+              <h3 class="cert-name">Structured Query<br>Language (SQL)</h3>
+              <p class="cert-issuer">Sabudh Foundation · Data Science Batch-15 · Jul–Dec 2025</p>
+              <p class="cert-desc"><strong>SQL fundamentals to advanced queries</strong> — joins, subqueries, window functions, indexing, stored procedures, and real-world database design. Awarded A grade.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">SQL Queries</span>
+                <span class="cert-chip">Joins &amp; Subqueries</span>
+                <span class="cert-chip">Window Functions</span>
+                <span class="cert-chip">Indexing</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://drive.google.com/file/d/12Dw55YI_8gHSOM9W4KmusHlF1ThQxIUV/view?usp=sharing" target="_blank" class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span style="font-family:'Syne',sans-serif;font-weight:900;font-size:1.4rem;color:#ab47bc;">A</span>
+                <span class="cert-category-pill" style="background:rgba(171,71,188,.08);border-color:rgba(171,71,188,.22);color:#ab47bc;">Database</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(171,71,188,.08);border:1px solid rgba(171,71,188,.18);">
+                <i class="fa-solid fa-table" style="color:#ab47bc;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(171,71,188,.08);border-color:rgba(171,71,188,.2);color:#ab47bc;">Sabudh</div>
+              <div class="cert-num-label">07 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 08 · Sabudh — Machine Learning (A) ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#0d5c63,#00bcd4);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Module · Verified
+              </div>
+              <h3 class="cert-name">Machine<br>Learning</h3>
+              <p class="cert-issuer">Sabudh Foundation · Data Science Batch-15 · Jul–Dec 2025</p>
+              <p class="cert-desc"><strong>Classical and ensemble ML models</strong> — linear/logistic regression, decision trees, SVM, clustering, and model evaluation strategies. Awarded A grade.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">Regression Models</span>
+                <span class="cert-chip">Decision Trees</span>
+                <span class="cert-chip">SVM</span>
+                <span class="cert-chip">Clustering</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://drive.google.com/file/d/1EIjnBdmLhpyhSxQX8ibNNLOBqmbb1c6n/view?usp=sharing" target="_blank" class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span style="font-family:'Syne',sans-serif;font-weight:900;font-size:1.4rem;color:#00bcd4;">A</span>
+                <span class="cert-category-pill" style="background:rgba(0,188,212,.08);border-color:rgba(0,188,212,.22);color:#00bcd4;">ML / AI</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(0,188,212,.08);border:1px solid rgba(0,188,212,.18);">
+                <i class="fa-solid fa-robot" style="color:#00bcd4;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(0,188,212,.08);border-color:rgba(0,188,212,.2);color:#00bcd4;">Sabudh</div>
+              <div class="cert-num-label">08 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 09 · Sabudh — NLP (B+) ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#c62828,#ef9a9a);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Module · Verified
+              </div>
+              <h3 class="cert-name">Natural Language<br>Processing</h3>
+              <p class="cert-issuer">Sabudh Foundation · Data Science Batch-15 · Jul–Dec 2025</p>
+              <p class="cert-desc"><strong>Text processing, tokenisation, sentiment analysis, topic modelling, and transformer-based NLP</strong> pipelines. Awarded B+ grade.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">Text Processing</span>
+                <span class="cert-chip">Sentiment Analysis</span>
+                <span class="cert-chip">Topic Modelling</span>
+                <span class="cert-chip">Transformers</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://drive.google.com/file/d/1VK2y2AgG8JpGGD9VSvfPlyaDQS7miNxN/view?usp=sharing" target="_blank" class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span style="font-family:'Syne',sans-serif;font-weight:900;font-size:1.4rem;color:#ef9a9a;">B+</span>
+                <span class="cert-category-pill" style="background:rgba(239,154,154,.08);border-color:rgba(239,154,154,.22);color:#ef9a9a;">ML / AI</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(239,154,154,.08);border:1px solid rgba(239,154,154,.18);">
+                <i class="fa-solid fa-language" style="color:#ef9a9a;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(239,154,154,.08);border-color:rgba(239,154,154,.2);color:#ef9a9a;">Sabudh</div>
+              <div class="cert-num-label">09 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 10 · Sabudh — Deep Learning (B+) ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#1a237e,#5c6bc0);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Module · Verified
+              </div>
+              <h3 class="cert-name">Deep<br>Learning</h3>
+              <p class="cert-issuer">Sabudh Foundation · Data Science Batch-15 · Jul–Dec 2025</p>
+              <p class="cert-desc"><strong>Neural networks, CNNs, RNNs, LSTMs, and training techniques</strong> — backpropagation, optimisers, regularisation, and practical deep learning with frameworks. Awarded B+ grade.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">Neural Networks</span>
+                <span class="cert-chip">CNNs</span>
+                <span class="cert-chip">RNNs / LSTMs</span>
+                <span class="cert-chip">Backpropagation</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://drive.google.com/file/d/1aa8u1S2c6Roa_3kdE1iaUaUW3WvsBBDf/view?usp=sharing" target="_blank" class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span style="font-family:'Syne',sans-serif;font-weight:900;font-size:1.4rem;color:#5c6bc0;">B+</span>
+                <span class="cert-category-pill" style="background:rgba(92,107,192,.08);border-color:rgba(92,107,192,.22);color:#5c6bc0;">ML / AI</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(92,107,192,.08);border:1px solid rgba(92,107,192,.18);">
+                <i class="fa-solid fa-network-wired" style="color:#5c6bc0;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(92,107,192,.08);border-color:rgba(92,107,192,.2);color:#5c6bc0;">Sabudh</div>
+              <div class="cert-num-label">10 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 11 · Sabudh — Dataiku Module ── -->
+      <div class="cert-cf-card">
+        <div class="cert-card">
+          <div class="cert-card-bar" style="background:linear-gradient(90deg,#2e7d32,#81c784);"></div>
+          <div class="cert-card-body">
+            <div class="cert-left">
+              <div class="cert-verified-tag">
+                <span class="cert-verified-dot" style="background:#22c55e;"></span>Module · Verified
+              </div>
+              <h3 class="cert-name">Dataiku<br><span style="font-size:.8em;opacity:.7;">Applied Module</span></h3>
+              <p class="cert-issuer">Sabudh Foundation · Data Science Batch-15 · Jul–Dec 2025</p>
+              <p class="cert-desc"><strong>Applied Dataiku DSS</strong> in an academic data science context — building end-to-end ML pipelines, data preparation flows, and deploying models within collaborative projects.</p>
+              <div class="cert-chips">
+                <span class="cert-chip">Dataiku DSS</span>
+                <span class="cert-chip">ML Pipelines</span>
+                <span class="cert-chip">Data Flows</span>
+                <span class="cert-chip">Collaboration</span>
+              </div>
+              <div class="cert-bottom">
+                <a href="https://drive.google.com/file/d/1D3r17YH6Y6nBnEyp59g99HQ7S7vbHz_U/view?usp=sharing" target="_blank" class="cert-verify-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i> Verify
+                </a>
+                <span class="cert-category-pill" style="background:rgba(129,199,132,.08);border-color:rgba(129,199,132,.22);color:#81c784;">ML / AI</span>
+              </div>
+            </div>
+            <div class="cert-icon-wrap">
+              <div class="cert-icon-box" style="background:rgba(129,199,132,.08);border:1px solid rgba(129,199,132,.18);">
+                <i class="fa-solid fa-diagram-project" style="color:#81c784;"></i>
+              </div>
+              <div class="cert-issuer-badge" style="background:rgba(129,199,132,.08);border-color:rgba(129,199,132,.2);color:#81c784;">Sabudh</div>
+              <div class="cert-num-label">11 / 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /certStage -->
+  </div><!-- /cert-cf-scene -->
+
+  <!-- Dots -->
+  <div class="cert-cf-dots" id="certDots"></div>
+
+  <!-- Navigation -->
+  <div class="cert-cf-nav" data-reveal style="transition-delay:.15s;">
+    <button class="cf-nav-btn" id="cfPrev" aria-label="Previous">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <div class="cert-cf-counter">
+      <span id="cfCur">01</span> / <span id="cfTotal">15</span>
+    </div>
+    <button class="cf-nav-btn" id="cfNext" aria-label="Next">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <p class="cert-cf-hint">← → arrow keys &nbsp;·&nbsp; click side cards &nbsp;·&nbsp; swipe to navigate</p>
+
+</section>
+
+<footer id="footer">
+        <div class="row">
+            <div class="col">
+                <img src="/images/logo.png" class="logo">
+                <p>B. Tech Computer Science (Data Analytics) student at VIT-AP University, passionate about WebDev, AI, Data Science, and building scalable solutions.</p>
+            </div>
+            <div class="col">
+                <h3>Contact Info <div class="underline"><span></span></div></h3>
+                <p>VIT - AP University</p>
+                <p>Inavolu, Amaravathi</p>
+                <p>Andhra Pradesh, 522237 India</p>
+                <p class="email-id">arpitmakkar1204@gmail.com</p>
+                <h4>+91 - 70872-36772</h4>
+                <h4>+91 - 70091-75060</h4>
+            </div>
+            <div class="col">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="#hero-section">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#certification">Certifications</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Stay Updated <div class="underline"><span></span></div></h3>
+                <p>Open to SDE Intern & Data Science opportunities.</p>
+                <br>
+                <form id="contactForm">
+                  <i class="fa-regular fa-envelope"></i>
+                  <input type="email" id="visitorEmail" placeholder="Enter your email id" required>
+                  <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/makkararpit/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/ArpitMakkar12" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://leetcode.com/u/arpit_makkar12/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg></a>
+                    <a href="mailto:arpitmakkar1204@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Arpit Makkar © 2026 - All Rights Reserved</p>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
